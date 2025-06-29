@@ -21,12 +21,16 @@ connectColudinay();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// const originForDev = ["http://localhost:5174", "http://localhost:5173"];
-
 app.use(
   cors({
-    origin: ["http://localhost:5174", "http://localhost:5173"],
+    origin:
+      process.env.NODE_ENV === "production"
+        ? [process.env.ORIGIN_ADMIN, process.env.ORIGIN_FRONTEND]
+        : ["http://localhost:5174", "http://localhost:5173"],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    exposedHeaders: ["set-cookie"],
   })
 );
 app.use(cookieParser());
