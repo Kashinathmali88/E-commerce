@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Sneaker.png";
 
 function Footer() {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-11/12 mx-auto h-40 flex">
         <div className="w-1/2 ml-10 h-full">
-          <img className="w-36 h-20" src="src\assets\Sneaker.png" alt="" />
+          <img className="w-36 h-20" src={logo} alt="" />
           <p className="hidden sm:block md:w-78 overflow-hidden  text-sm p-4 text-justify font-light opacity-95">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eos
             eius nisi quam eum reprehenderit ratione ex animi harum.

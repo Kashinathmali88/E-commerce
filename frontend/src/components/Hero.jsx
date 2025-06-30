@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import hero from "../assets/hero-left.avif";
 function Hero() {
   return (
     <div className="sm:w-10/12 w-96 h-[500px] border mx-auto mt-10 flex sm:flex-row flex-col">
@@ -29,7 +29,8 @@ function Hero() {
       <div className=" sm:w-1/2 w-96">
         <img
           className="object-cover w-full sm:h-[500px] h-[370px]"
-          src="src\assets\hero-left.avif"
+          // src="src\assets\hero-left.avif"
+          src={hero}
           alt=""
         />
       </div>

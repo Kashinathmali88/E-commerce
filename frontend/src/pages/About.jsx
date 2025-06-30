@@ -1,7 +1,7 @@
 import React from "react";
-import sneakerImage from "../assets/hero-left.avif";
 import OnlyTitle from "../components/OnlyTitle";
 import SubscribeNow from "../components/SubscribeNow";
+import hero from "../assets/hero-left.avif";
 function About() {
   return (
     <div>
@@ -10,7 +10,7 @@ function About() {
         {/* Left Image Section */}
         <div className="w-full md:w-1/2">
           <img
-            src={sneakerImage}
+            src={hero}
             alt="Sneaker World"
             className="w-full h-auto rounded-xl shadow-lg"
           />

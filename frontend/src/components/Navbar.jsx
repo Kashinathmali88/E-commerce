@@ -6,6 +6,7 @@ import { IoMdArrowBack } from "react-icons/io";
 import { ShopContext } from "../context/ShopContex";
 import axios from "axios";
 import toast from "react-hot-toast";
+import logo from "../assets/Sneaker.png";
 
 function Navbar() {
   const [visibility, setVisibility] = useState(false);
@@ -33,7 +34,7 @@ function Navbar() {
     <>
       <div className="flex items-center justify-around sm:border-b sm:border-slate-300  sm:sticky sm:top-0 bg-white z-50 min-h-16">
         <div className="w-36">
-          <img className="w-36" src="src\assets\Sneaker.png" alt="logo" />
+          <img className="w-36" src={logo} alt="logo" />
         </div>
 
         <div className="w-1/4">
