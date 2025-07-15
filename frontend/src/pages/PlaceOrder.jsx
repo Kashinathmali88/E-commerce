@@ -136,7 +136,7 @@ function PlaceOrder() {
           />
         </div>
 
-        <div className="w-full h-full">
+        <div className="w-[350px]  h-full">
           <div className="w-full flex gap-3 justify-between">
             <input
               {...register("firstName")}
@@ -212,7 +212,7 @@ function PlaceOrder() {
           </div>
         </div>
       </div>
-      <div className="w-2/6  flex flex-col">
+      <div className="sm:w-2/6 flex flex-col">
         <div className="w-full h-1/2">
           <CartTotal />
         </div>

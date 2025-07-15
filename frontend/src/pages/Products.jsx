@@ -76,7 +76,7 @@ function Products() {
             {currency}
             {productData.price}
           </p>
-          <p className="pt-5 text-gray-500 w-1/2 md:4/5">
+          <p className="pt-5 text-gray-500 sm:w-1/2 w-[400px] md:4/5">
             {productData.description}
           </p>
           <p className="text-gray-700 text-sm pt-5 mb-3">Select Size</p>
@@ -103,7 +103,7 @@ function Products() {
             ADD TO CART
           </button>
           <hr className="border-t-1 w-1/2 border-gray-400" />
-          <div className="w-1/2 text-sm text-slate-600">
+          <div className="sm:w-1/2 w-[400px] text-sm text-slate-600">
             <p>100% Original product.</p>
             <p>Cash on delivery is available on this product.</p>
             <p>Easy return and exchange policy within 7 days.</p>

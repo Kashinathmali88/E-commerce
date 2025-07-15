@@ -36,15 +36,14 @@ function Cart() {
         const productData = products.find(
           (product) => product._id === item._id
         );
-
         if (!productData) return null;
         return (
           <div key={index}>
-            <div className="w-full h-40 border grid grid-cols-9  border-x-0 border-slate-200 items-center">
+            <div className="sm:w-full w-[400px] sm:h-40 border sm:grid sm:grid-cols-6 md:grid-cols-9 flex flex-col items-start sm:border-x-0 border-slate-200 sm:items-center">
               <div className="p-4 w-56 md:col-span-2 col-span-1">
                 <img className="h-32 w-56 " src={productData.image[0]} alt="" />
               </div>
-              <div className="col-span-3">
+              <div className="md:col-span-3 ml-4 sm:col-span-1">
                 <p className="text-xl font-medium">{productData.name}</p>
                 <div className="h-full flex gap-4 items-center mt-4">
                   <p className="text-lg font-medium">
@@ -56,30 +55,32 @@ function Cart() {
                   </p>
                 </div>
               </div>
-              <div className="col-span-2">
-                <input
-                  className="w-32 h-7 pl-2 border border-slate-400 outline-0"
-                  type="number"
-                  min={1}
-                  name=""
-                  id=""
-                  value={item.quantity}
-                  onChange={(e) =>
-                    e.target.value === "" || e.target.value === "0"
-                      ? null
-                      : updateQuantity(
-                          item._id,
-                          item.size,
-                          Number(e.target.value)
-                        )
-                  }
-                />
-              </div>
-              <div
-                onClick={() => updateQuantity(item._id, item.size, 0)}
-                className="ml-36 col-span-2 w-12 h-12 bg-red-400 flex justify-center items-center rounded-full"
-              >
-                <RiDeleteBinLine className="text-2xl font-bold cursor-pointer" />
+              <div className="flex items-center justify-around">
+                <div className="sm:col-span-2 ml-4 mt-2 ">
+                  <input
+                    className="w-32 h-7 pl-2 border border-slate-400 outline-0"
+                    type="number"
+                    min={1}
+                    name=""
+                    id=""
+                    value={item.quantity}
+                    onChange={(e) =>
+                      e.target.value === "" || e.target.value === "0"
+                        ? null
+                        : updateQuantity(
+                            item._id,
+                            item.size,
+                            Number(e.target.value)
+                          )
+                    }
+                  />
+                </div>
+                <div
+                  onClick={() => updateQuantity(item._id, item.size, 0)}
+                  className="ml-36 sm:col-span-2  w-12 h-12"
+                >
+                  <RiDeleteBinLine className="text-2xl font-bold cursor-pointer" />
+                </div>
               </div>
             </div>
           </div>

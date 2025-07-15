@@ -23,9 +23,12 @@ function Footer() {
               <Link to="/about">
                 <li>About us</li>
               </Link>
-              <Link to="/admin">
-                <li>Admin</li>
-              </Link>
+              <a
+                href="https://e-commerce-admin-two-ecru.vercel.app/"
+                target="_blank"
+              >
+                <li className="cursor-pointer">Admin</li>
+              </a>
               <li>Delivery</li>
               <li>Privacy policy</li>
             </ul>
